@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insert Element</title>
+    <script>
+
+
+        const insertEle = () => {
+
+            let arr = [10, 20, 36, 87, 45, 69, 58, 55, 20, 31, 46, 5, 987]
+            let newEl = parseInt(document.getElementById('element').value)
+            let position = document.getElementById('position').value
+
+            for (let i = arr.length - 1; i > 0; i--) {
+                // console.log(i)
+                if (i >= position) {
+                    arr[i + 1] = arr[i]
+
+                    if (i == position) {
+                        arr[i] = newEl
+
+                    }
+                }
+
+            }
+            console.log(arr);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="enter position">
+    <input type="text" id="element" placeholder="enter the element">
+    <button onclick="insertEle()">Insert Element</button>
+
+</body>
+
+</html>

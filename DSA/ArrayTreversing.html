@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Terversing</title>
+
+    <script>
+        let Arr = [12,5,6,8,9,55,22,33,66,9,7,41,25,89,62,48]
+        //  Tresing using For loop
+        // for(let i=0; Arr.length>i; i++){
+        //     console.log(Arr[i])
+        // }
+        
+        
+        const getElement = ()=>{
+            let ele = document.getElementById('element').value
+            if(ele<0){
+                alert('please enter positive value')
+            }
+            else  if(ele<Arr.length && typeof parseInt(ele) === "number"){
+                alert(Arr[ele])
+                
+
+            }
+            else{
+                alert('Please Enter a Vaild Input type')
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+
+</body>
+
+</html>
